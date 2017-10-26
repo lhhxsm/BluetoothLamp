@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+  <Button
+      android:id="@+id/is_support_bluetooth"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:gravity="center"
+      android:onClick="isSupportBluetooth"
+      android:text="是否支持蓝牙"
+      />
+
+  <Button
+      android:id="@+id/is_bluetooth_enable"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:gravity="center"
+      android:onClick="isBluetoothEnable"
+      android:text="蓝牙是否打开"
+      />
+
+  <Button
+      android:id="@+id/turn_on_bluetooth"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:gravity="center"
+      android:onClick="turnOnBluetooth"
+      android:text="打开蓝牙"
+      />
+
+  <Button
+      android:id="@+id/turn_off_bluetooth"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:gravity="center"
+      android:onClick="turnOffBluetooth"
+      android:text="关闭蓝牙"
+      />
+  <Button
+      android:id="@+id/enable_Visibility"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:gravity="center"
+      android:onClick="enableVisibility"
+      android:text="蓝牙的可见性"
+      />
+  <Button
+      android:id="@+id/find_device"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:gravity="center"
+      android:onClick="findDevice"
+      android:text="查找设备"
+      />
+  <Button
+      android:id="@+id/bonded_device"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:gravity="center"
+      android:onClick="bondedDevice"
+      android:text="查看已绑定设备"
+      />
+
+  <ListView
+      android:id="@+id/lv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@android:color/holo_blue_dark"
+      android:contentDescription="@null"
+      android:divider="@android:color/background_dark"
+      android:dividerHeight="1dp"
+      android:listSelector="@android:color/transparent"
+      />
+
+
+</LinearLayout>
