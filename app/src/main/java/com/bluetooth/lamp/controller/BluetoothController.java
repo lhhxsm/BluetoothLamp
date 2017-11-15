@@ -1,4 +1,4 @@
-package com.bluetooth.lamp;
+package com.bluetooth.lamp.controller;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -19,6 +19,10 @@ public class BluetoothController {
 
   public BluetoothController() {
     mAdapter = BluetoothAdapter.getDefaultAdapter();
+  }
+
+  public BluetoothAdapter getAdapter() {
+    return mAdapter;
   }
 
   /**
@@ -58,14 +62,14 @@ public class BluetoothController {
    */
   public void enableVisibility(Context context) {
     Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-    intent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+    intent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);//5分钟之内蓝牙可见
     context.startActivity(intent);
   }
 
   /**
    * 查找设备
    */
-  public void findDevice() {
+  public void findTheDevice() {
     if (mAdapter == null) return;
     mAdapter.startDiscovery();
   }
@@ -73,7 +77,7 @@ public class BluetoothController {
   /**
    * 获取绑定设备
    */
-  public List<BluetoothDevice> getBondedDeviceList() {
+  public List<BluetoothDevice> getBondedDevices() {
     return new ArrayList<>(mAdapter.getBondedDevices());
   }
 }
